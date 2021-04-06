@@ -11,7 +11,9 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.Read();
+            int var = Console.Read();
+            Console.WriteLine("ASCII value is {0}:", var);
+            Console.ReadKey();
         }
     }
 }
