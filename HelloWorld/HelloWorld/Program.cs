@@ -38,6 +38,56 @@ namespace HelloWorld
             Console.WriteLine("First hello is at " + pos);
 
             Console.ReadKey();
+
+            Box test = new Box(4, 4, 4);
+
+            Console.WriteLine("H: {0}, W: {1}, L: {2}", test.Height, test.Width, test.length);
+            Console.WriteLine("Box volume is: {0}", test.Volume);
+
+            Console.ReadKey();
+        }
+    }
+
+    class Box
+    {
+        public int length;
+        //private int width;
+        private int height;
+
+        public Box(int length, int width, int height)
+        {
+            this.length = length;
+            Width = width;
+            Height = height;
+        }
+
+        // get/set for private member height
+        public int Height
+        {
+            get
+            {
+                return height;
+            }
+
+            set
+            {
+                if(value < 0)
+                {
+                    throw new Exception("Height can not be negative");
+                }
+                else
+                {
+                    height = value;
+                }
+            }
+        }
+
+        // automatic get/set for private member width
+        public int Width { get; set; }
+
+        public int Volume
+        { 
+            get { return height * Width * length; }
         }
     }
 }
