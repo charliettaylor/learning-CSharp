@@ -14,7 +14,7 @@ namespace HelloWorld
             Console.WriteLine("Hello World!");
             int var = Console.Read();
             Console.WriteLine("ASCII value is {0}:", var);
-            
+
             //conversions
             int myInt = 4;
             double myDouble = 13.37;
@@ -44,8 +44,24 @@ namespace HelloWorld
             Console.WriteLine("H: {0}, W: {1}, L: {2}", test.Height, test.Width, test.length);
             Console.WriteLine("Box volume is: {0}", test.Volume);
 
+
+            // foreach loops and arrays
+            int[] nums = { 1, 2, 3, 4, 5 };
+            // nums.Rank returns the dimensions of the array
+            foreach (int num in nums)
+            {
+                Console.WriteLine(num);
+            }
             Console.ReadKey();
         }
+
+        //switch(dataType)
+        //{
+        // case var:
+        // ...
+        // default:
+        //}
+
     }
 
     class Box
